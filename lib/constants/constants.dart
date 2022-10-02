@@ -5,3 +5,6 @@ TextStyle regularStyle =
 
 TextStyle headingStyle =
     const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+
+const  homepage = '/';
+const  transactionpage = 'trans';

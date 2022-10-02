@@ -18,27 +18,25 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Row(
-                        children: [
-                          IconButton(
+                    child: Row(
+                      children: [
+                        IconButton(
+                          color: Colors.blue,
+                          onPressed: () =>
+                              Navigator.pushNamed(context, 'trans'),
+                          icon: const Icon(
+                            Icons.arrow_back_ios,
+                          ),
+                        ),
+                        const Text(
+                          'Transactions',
+                          style: TextStyle(
                             color: Colors.blue,
-                            onPressed: () => 'null',
-                            icon: const Icon(
-                              Icons.arrow_back_ios,
-                            ),
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
                           ),
-                          const Text(
-                            'Transactions',
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
@@ -64,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                     height: 20,
                   ),
 
-                  // Transaction Displays 
+                  // Transaction Displays
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(

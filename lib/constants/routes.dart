@@ -1,17 +1,22 @@
-import 'dart:js';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:test_app/constants/constants.dart';
 import 'package:test_app/screens/profile_page.dart';
 import 'package:test_app/screens/transactions_page.dart';
 
 class MyRoute {
-  static Route<dynamic> generateRoute(RouteSettings settings) {
-    if (settings.name == '/') {
-      MaterialPageRoute(builder: (context) => const ProfileScreen());
-    } else if (settings.name == 'transact') {
-      MaterialPageRoute(builder: (context) => const TransactionDetails());
+  static Route<dynamic> generateRoute(RouteSettings setting) {
+    switch (setting.name) {
+      case homepage:
+        return MaterialPageRoute(builder: (context) => const ProfileScreen());
+      case transactionpage:
+        return MaterialPageRoute(
+            builder: (context) => const TransactionDetails());
+      default:
     }
-    return MaterialPageRoute(builder: (context) => const ProfileScreen());
+    return MaterialPageRoute(
+      builder: (context) => const Scaffold(
+        body: Text(''),
+      ),
+    );
   }
 }
